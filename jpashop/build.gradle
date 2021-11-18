@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'jpabook'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//thymeleaf수정 시 매번 서버 재실행 하기 귀찮아서 추 (실행 시 restartedMain이라고 뜨면 된 것)(html수정 후 수정한 파일만 recompile하면됨)
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//JUnit4 추가
+	testImplementation("org.junit.vintage:junit-vintage-engine") {
+	  exclude group: "org.hamcrest", module: "hamcrest-core"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
