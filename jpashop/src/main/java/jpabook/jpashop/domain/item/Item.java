@@ -15,8 +15,7 @@ import java.util.List;
 @Getter @Setter
 public abstract class Item { //상속관계 매핑 (여기에 있는 속성은 공통 속성들임)
 
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     @Column(name = "item_id")
     private Long id;
 
