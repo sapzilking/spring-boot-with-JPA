@@ -1,0 +1,22 @@
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:test
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop # table이 기존에 있으면 지우고 Entity 정보를 보고 테이블 자동 생성
+#    properties:
+#      hibernate:
+##        show_sql: true # System.out에 sql로그찍음 (배포 시에는 제거해야함)
+#        format_sql: true
+#  output:
+#    ansi:
+#      enabled: always
+# 위의 코드 전체가 주석이어도 spring boot에서는 기본으로 별도의 설정이 없으면 memory모드로 돌린다.
+
+logging.level:
+  org.hibernate.SQL: debug # logger에 sql을 찍음
+  org.hibernate.type: trace
