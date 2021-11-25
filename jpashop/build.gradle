@@ -21,6 +21,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	//thymeleaf수정 시 매번 서버 재실행 하기 귀찮아서 추 (실행 시 restartedMain이라고 뜨면 된 것)(html수정 후 수정한 파일만 recompile하면됨)
 	implementation 'org.springframework.boot:spring-boot-devtools'
@@ -37,3 +38,8 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+
+
+
+

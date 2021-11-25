@@ -50,8 +50,5 @@ public abstract class Item { //상속관계 매핑 (여기에 있는 속성은 �
 
         }
         this.stockQuantity = restStock;
-
     }
-
-
 }
