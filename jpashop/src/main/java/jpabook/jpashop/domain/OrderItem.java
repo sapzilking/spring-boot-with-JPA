@@ -15,8 +15,7 @@ import static javax.persistence.FetchType.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
 
-    @Id
-    @GeneratedValue
+    @Id @GeneratedValue
     @Column(name = "order_item_id")
     private Long id;
 
@@ -29,10 +28,7 @@ public class OrderItem {
     private Order order;
 
     private int orderPrice; //주문 당시의 가격 (아이템의 가격은 바뀔 수 있기 때문에)
-
     private int count; //주문 수량
-
-//    protected OrderItem() {}
 
     //==생성 메서드==//
     public static OrderItem createOrderItem(Item item, int orderPrice, int count) {

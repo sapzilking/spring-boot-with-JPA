@@ -13,8 +13,7 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
-@Getter
-@Setter
+@Getter @Setter
 public abstract class Item { //상속관계 매핑 (여기에 있는 속성은 공통 속성들임)
 
     @Id
@@ -23,9 +22,7 @@ public abstract class Item { //상속관계 매핑 (여기에 있는 속성은 �
     private Long id;
 
     private String name;
-
     private int price;
-
     private int stockQuantity;
 
     @ManyToMany(mappedBy = "items")
