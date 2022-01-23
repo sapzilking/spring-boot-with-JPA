@@ -21,7 +21,7 @@ public class Category {
     private String name;
 
 
-    @ManyToMany //다대다 관계는 실무에서 사용하지말자. 예제기 때문에 모든 관계를 해보기 위해 추가하였
+    @ManyToMany //다대다 관계는 실무에서 사용하지말자. 예제기 때문에 모든 관계를 해보기 위해 추가하였음
     @JoinTable(name = "category_item",
             joinColumns = @JoinColumn(name = "category_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id"))
